@@ -52,6 +52,11 @@
 
         <!-- Portfolio Grid Items -->
         <div class="row">
+          <PortfolioItem
+            id="1"
+            thumbnail-url="https://profile-mock.herokuapp.com/main.jpg"
+          />
+
           <!-- Portfolio Item 1 -->
           <div class="col-md-6 col-lg-4">
             <div
@@ -311,5 +316,10 @@
 </template>
 
 <script>
-export default {}
+import PortfolioItem from '~/components/PortfolioItem.vue'
+export default {
+  components: {
+    PortfolioItem
+  }
+}
 </script>
