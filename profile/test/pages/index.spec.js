@@ -23,7 +23,7 @@ describe('index', () => {
   lazy('component', () => mount(index, { store: lazy('store') }))
 
   beforeEach(() => {
-    AxiosMock.onGet('profile/portfolios').reply(
+    AxiosMock.onGet('/api/profile/portfolios').reply(
       200,
       require('@/test/fixtures/portfolios.json')
     )

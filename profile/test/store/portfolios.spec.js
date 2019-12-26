@@ -33,7 +33,7 @@ describe('portfolios', () => {
       }))
 
       beforeEach(() => {
-        AxiosMock.onGet('profile/portfolios').reply(200, lazy('mockPortfolios'))
+        AxiosMock.onGet('/api/profile/portfolios').reply(200, lazy('mockPortfolios'))
       })
 
       test('サーバーに問合せ後、状態がコミットされること', async () => {
