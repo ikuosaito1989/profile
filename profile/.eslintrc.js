@@ -17,6 +17,11 @@ module.exports = {
   plugins: [
     'prettier'
   ],
+  globals: {
+    context: true,
+    lazy: true,
+    subject: true,
+  },
   // add your custom rules here
   rules: {
   }
