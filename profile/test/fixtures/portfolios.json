@@ -1,0 +1,30 @@
+[
+    {
+        "id": 1,
+        "name": "みんなの洋楽ランキング",
+        "thumbnailUrl": "https://profile-mock.herokuapp.com/main.jpg",
+        "description": "最新のビルボードチャート(Billboard Hot 100 Chart)からいち早く洋楽ランキングTOP10をご紹介。最新チャート、Youtube再生回数、年間チャートの洋楽ランキングを解説、動画、視聴ありで発信しています。",
+        "portfolioUrl": "https://mygkrnk.com"
+    },
+    {
+        "id": 2,
+        "name": "cabin",
+        "thumbnailUrl": "https://profile-mock.herokuapp.com/cabin.png",
+        "description": "cabinテスト",
+        "portfolioUrl": "https://mygkrnk.com"
+    },
+    {
+        "id": 3,
+        "name": "cake",
+        "thumbnailUrl": "https://profile-mock.herokuapp.com/cake.png",
+        "description": "cakeテスト",
+        "portfolioUrl": "https://mygkrnk.com"
+    },
+    {
+        "id": 4,
+        "name": "circus",
+        "thumbnailUrl": "https://profile-mock.herokuapp.com/circus.png",
+        "description": "circusテスト",
+        "portfolioUrl": "https://mygkrnk.com"
+    }
+]
