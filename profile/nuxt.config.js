@@ -49,7 +49,9 @@ export default {
    ** Axios module configuration
    ** See https://axios.nuxtjs.org/options
    */
-  axios: {},
+  axios: {
+    baseURL:        "https://profile-mock.herokuapp.com/",
+  },
   /*
    ** Build configuration
    */
