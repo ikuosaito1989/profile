@@ -32,7 +32,7 @@ export default class LazyVariableHelper {
   static lazy(name, func) {
     if (func) {
       beforeEach(function() {
-        LazyVariableHelper.variables[name] = { func: func }
+        LazyVariableHelper.variables[name] = { func }
       })
       return
     }

@@ -1,9 +1,12 @@
-import Vue                               from 'vue'
-import Vuex                              from 'vuex'
-import LazyVariableHelper                from '@/test/spec_helpers/lazy_variable_helper'
-import { AxiosMock, AxiosMockPlugin }    from '@/test/spec_helpers/nuxt_axios_mock_adapter'
+import Vue from 'vue'
+import Vuex from 'vuex'
+import { RouterLinkStub } from '@vue/test-utils'
+import LazyVariableHelper from '@/test/spec_helpers/lazy_variable_helper'
+import {
+  AxiosMock,
+  AxiosMockPlugin
+} from '@/test/spec_helpers/nuxt_axios_mock_adapter'
 // import { Carousel, Slide }               from 'vue-carousel'
-import { RouterLinkStub }                from '@vue/test-utils'
 // import { Validator, ValidationProvider } from 'vee-validate'
 // import { Datetime }                      from 'vue-datetime'
 // import { MonthlyPicker }                 from 'vue-monthly-picker'

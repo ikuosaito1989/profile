@@ -1,9 +1,9 @@
-import axios            from 'axios'
+import axios from 'axios'
 import AxiosMockAdapter from 'axios-mock-adapter'
 
 export const AxiosMock = new AxiosMockAdapter(axios)
 
-export const $axios = { }
+export const $axios = {}
 
 const ORIGINAL_RESET_METHOD = AxiosMock.reset.bind(AxiosMock)
 AxiosMock.reset = () => {
@@ -17,5 +17,5 @@ AxiosMock.reset = () => {
 export const AxiosMockPlugin = {
   install(Vue, options) {
     Vue.prototype.$axios = $axios
-  },
+  }
 }
