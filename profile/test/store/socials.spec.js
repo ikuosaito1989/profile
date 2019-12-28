@@ -33,10 +33,7 @@ describe('socials', () => {
       }))
 
       beforeEach(() => {
-        AxiosMock.onGet('/api/profile/socials').reply(
-          200,
-          lazy('mockSocials')
-        )
+        AxiosMock.onGet('/api/profile/socials').reply(200, lazy('mockSocials'))
       })
 
       test('サーバーに問合せ後、状態がコミットされること', async () => {

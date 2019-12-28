@@ -10,15 +10,18 @@ describe('index', () => {
     () =>
       new Vuex.Store({
         getters: {
-          'portfolios/portfolios': () => lazy('portfolios')
+          'portfolios/portfolios': () => lazy('portfolios'),
+          'socials/socials': () => lazy('socials')
         },
         actions: {
-          'portfolios/getPortfolios': jest.fn()
+          'portfolios/getPortfolios': jest.fn(),
+          'socials/showSocials': jest.fn()
         }
       })
   )
 
   lazy('portfolios', () => null)
+  lazy('socials', () => null)
 
   lazy('component', () => mount(index, { store: lazy('store') }))
 
@@ -26,6 +29,10 @@ describe('index', () => {
     AxiosMock.onGet('/api/profile/portfolios').reply(
       200,
       require('@/test/fixtures/portfolios.json')
+    )
+    AxiosMock.onGet('/api/profile/socials').reply(
+      200,
+      require('@/test/fixtures/socials.json')
     )
   })
 

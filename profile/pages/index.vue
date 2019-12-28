@@ -127,18 +127,15 @@
           <!-- Footer Social Icons -->
           <div class="col-lg-4 mb-5 mb-lg-0">
             <h4 class="text-uppercase mb-4">Around the Web</h4>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
-              <i class="fab fa-fw fa-facebook-f"></i>
-            </a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
-              <i class="fab fa-fw fa-twitter"></i>
-            </a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
-              <i class="fab fa-fw fa-linkedin-in"></i>
-            </a>
-            <a class="btn btn-outline-light btn-social mx-1" href="#">
-              <i class="fab fa-fw fa-dribbble"></i>
-            </a>
+            <Social
+              :key="index"
+              v-for="(social, index) in socials"
+              :name="social.fontawesome.name"
+              :prefix="social.fontawesome.prefix"
+              :icon-name="social.fontawesome.iconName"
+              :url="social.url"
+              target="_blank"
+            />
           </div>
 
           <!-- Footer About Text -->
@@ -175,17 +172,24 @@
 
 <script>
 import PortfolioItem from '~/components/PortfolioItem.vue'
+import Social from '~/components/social.vue'
+
 export default {
   components: {
-    PortfolioItem
+    PortfolioItem,
+    Social
   },
   computed: {
     portfolios() {
       return this.$store.getters['portfolios/portfolios']
+    },
+    socials() {
+      return this.$store.getters['socials/socials']
     }
   },
   created() {
     this.$store.dispatch('portfolios/getPortfolios')
+    this.$store.dispatch('socials/showSocials')
   }
 }
 </script>
