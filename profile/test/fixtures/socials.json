@@ -1,0 +1,42 @@
+[
+    {
+        "id": 1,
+        "name": "Twitter",
+        "url": "https://twitter.com/mygkrnk",
+        "fontawesome": {
+            "name": "twitter",
+            "prefix": "fab",
+            "iconName": "fa-twitter"
+        }
+    },
+    {
+        "id": 2,
+        "name": "Facebook",
+        "url": "https://www.facebook.com/ikuo.saito.710",
+        "fontawesome": {
+            "name": "facebook",
+            "prefix": "fab",
+            "iconName": "fa-facebook"
+        }
+    },
+    {
+        "id": 3,
+        "name": "Instagram",
+        "url": "https://www.instagram.com/ikuo.saito/",
+        "fontawesome": {
+            "name": "instagram",
+            "prefix": "fab",
+            "iconName": "fa-instagram"
+        }
+    },
+    {
+        "id": 4,
+        "name": "Blog",
+        "url": "http://tekitoumemo.hatenablog.com/",
+        "fontawesome": {
+            "name": "blog",
+            "prefix": "fas",
+            "iconName": "fa-blog"
+        }
+    }
+]
