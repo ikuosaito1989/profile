@@ -52,7 +52,7 @@
 
         <!-- Portfolio Grid Items -->
         <div class="row">
-          <PortfolioItem
+          <Portfolio
             :key="index"
             v-for="(portfolio, index) in portfolios"
             :id="portfolio.id"
@@ -171,12 +171,12 @@
 </template>
 
 <script>
-import PortfolioItem from '~/components/PortfolioItem'
+import Portfolio from '~/components/portfolio'
 import Social from '~/components/social'
 
 export default {
   components: {
-    PortfolioItem,
+    Portfolio,
     Social
   },
   computed: {
