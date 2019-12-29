@@ -1,10 +1,10 @@
 import '@/test/spec_helper.js'
 import { mount } from '@vue/test-utils'
-import PortfolioItem from '@/components/PortfolioItem.vue'
+import _id from '@/src/pages/portfolio/_id.vue'
 
-describe('PortfolioItem', () => {
+describe('_id', () => {
   test('is a Vue instance', () => {
-    const wrapper = mount(PortfolioItem)
+    const wrapper = mount(_id)
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 })

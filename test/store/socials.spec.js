@@ -4,7 +4,7 @@ import {
   AxiosMock,
   $axios
 } from '@/test/spec_helpers/nuxt_axios_mock_adapter.js'
-import { state, actions, getters, mutations } from '@/store/socials.js'
+import { state, actions, getters, mutations } from '@/src/store/socials.js'
 
 describe('socials', () => {
   lazy(

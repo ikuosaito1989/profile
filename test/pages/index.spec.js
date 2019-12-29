@@ -2,7 +2,7 @@ import '@/test/spec_helper.js'
 import { mount } from '@vue/test-utils'
 import Vuex from 'vuex'
 import { AxiosMock } from '@/test/spec_helpers/nuxt_axios_mock_adapter.js'
-import index from '@/pages/index.vue'
+import index from '@/src/pages/index.vue'
 
 describe('index', () => {
   lazy(
