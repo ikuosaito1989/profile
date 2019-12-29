@@ -171,8 +171,8 @@
 </template>
 
 <script>
-import PortfolioItem from '~/components/PortfolioItem.vue'
-import Social from '~/components/social.vue'
+import PortfolioItem from '~/components/PortfolioItem'
+import Social from '~/components/social'
 
 export default {
   components: {
