@@ -188,7 +188,7 @@ export default {
     }
   },
   created() {
-    this.$store.dispatch('portfolios/getPortfolios')
+    this.$store.dispatch('portfolios/showPortfolios')
     this.$store.dispatch('socials/showSocials')
   }
 }

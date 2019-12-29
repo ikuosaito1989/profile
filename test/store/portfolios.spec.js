@@ -25,8 +25,8 @@ describe('portfolios', () => {
   })
 
   describe('Action', () => {
-    describe('getPortfolios', () => {
-      subject(() => actions.getPortfolios.bind({ $axios })(lazy('context')))
+    describe('showPortfolios', () => {
+      subject(() => actions.showPortfolios.bind({ $axios })(lazy('context')))
 
       lazy('context', () => ({
         commit: jest.fn()

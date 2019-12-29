@@ -14,7 +14,7 @@ describe('index', () => {
           'socials/socials': () => lazy('socials')
         },
         actions: {
-          'portfolios/getPortfolios': jest.fn(),
+          'portfolios/showPortfolios': jest.fn(),
           'socials/showSocials': jest.fn()
         }
       })

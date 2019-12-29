@@ -3,7 +3,7 @@ export const state = () => ({
 })
 
 export const actions = {
-  async getPortfolios(context) {
+  async showPortfolios(context) {
     const portfolios = await this.$axios.$get('/api/profile/portfolios')
     context.commit('setPortfolios', { portfolios })
   }
