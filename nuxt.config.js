@@ -33,7 +33,7 @@ export default {
   /*
    ** Global CSS
    */
-  css: ['~/assets/css/freelancer.min.css'],
+  css: ['~/assets/css/freelancer.min.css', '~/assets/css/profile.css'],
   /*
    ** Plugins to load before mounting the App
    */

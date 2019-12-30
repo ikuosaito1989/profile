@@ -63,6 +63,62 @@
       </div>
     </section>
 
+    <section id="about" class="page-section bg-primary text-white mb-0">
+      <div class="container">
+        <!-- About Section Heading -->
+        <h2 class="page-section-heading text-center text-uppercase text-white">
+          スキル
+        </h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="divider-custom-line"></div>
+        </div>
+
+        <div class="row-center">
+          <div class="skill-box">
+            <div class="skill-name">NuxtJS</div>
+            <div class="star-rating">
+              <div class="star-rating-front" style="width: 50%">★★★★★</div>
+              <div class="star-rating-back">★★★★★</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-name">NuxtJS</div>
+            <div class="star-rating">
+              <div class="star-rating-front" style="width: 50%">★★★★★</div>
+              <div class="star-rating-back">★★★★★</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-name">NuxtJS</div>
+            <div class="star-rating">
+              <div class="star-rating-front" style="width: 50%">★★★★★</div>
+              <div class="star-rating-back">★★★★★</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-name">NuxtJS</div>
+            <div class="star-rating">
+              <div class="star-rating-front" style="width: 50%">★★★★★</div>
+              <div class="star-rating-back">★★★★★</div>
+            </div>
+          </div>
+          <div class="skill-box">
+            <div class="skill-name">NuxtJS</div>
+            <div class="star-rating">
+              <div class="star-rating-front" style="width: 50%">★★★★★</div>
+              <div class="star-rating-back">★★★★★</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <!-- About Section -->
     <section id="about" class="page-section bg-primary text-white mb-0">
       <div class="container">
