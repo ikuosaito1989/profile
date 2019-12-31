@@ -80,40 +80,22 @@
         </div>
 
         <div class="row-center">
-          <div class="skill-box">
-            <div class="skill-name">NuxtJS</div>
-            <div class="star-rating">
-              <div class="star-rating-front" style="width: 50%">★★★★★</div>
-              <div class="star-rating-back">★★★★★</div>
-            </div>
+          <div class="skill-description">
+            <p class="lead">
+              はじめまして。私は平賀陽一(@musou1500)と申します。
+              高校生の頃からプログラミングを学び始め、今は主にWeb系のことをやっています。
+              言語はPHPを使用することが多いですが、Haxeという言語も大好きで、
+              少しながらコンパイラやIDEの開発にも貢献しています。
+            </p>
           </div>
-          <div class="skill-box">
-            <div class="skill-name">NuxtJS</div>
-            <div class="star-rating">
-              <div class="star-rating-front" style="width: 50%">★★★★★</div>
-              <div class="star-rating-back">★★★★★</div>
-            </div>
-          </div>
-          <div class="skill-box">
-            <div class="skill-name">NuxtJS</div>
-            <div class="star-rating">
-              <div class="star-rating-front" style="width: 50%">★★★★★</div>
-              <div class="star-rating-back">★★★★★</div>
-            </div>
-          </div>
-          <div class="skill-box">
-            <div class="skill-name">NuxtJS</div>
-            <div class="star-rating">
-              <div class="star-rating-front" style="width: 50%">★★★★★</div>
-              <div class="star-rating-back">★★★★★</div>
-            </div>
-          </div>
-          <div class="skill-box">
-            <div class="skill-name">NuxtJS</div>
-            <div class="star-rating">
-              <div class="star-rating-front" style="width: 50%">★★★★★</div>
-              <div class="star-rating-back">★★★★★</div>
-            </div>
+          <div class="skill-group">
+            <Skill
+              :key="index"
+              v-for="(skill, index) in skills"
+              :name="skill.name"
+              :thumbnail-url="skill.thumbnailUrl"
+              :star="skill.star"
+            />
           </div>
         </div>
       </div>
@@ -229,11 +211,13 @@
 <script>
 import Portfolio from '~/components/portfolio'
 import Social from '~/components/social'
+import Skill from '~/components/skill'
 
 export default {
   components: {
     Portfolio,
-    Social
+    Social,
+    Skill
   },
   computed: {
     portfolios() {
@@ -241,11 +225,15 @@ export default {
     },
     socials() {
       return this.$store.getters['socials/socials']
+    },
+    skills() {
+      return this.$store.getters['skills/skills']
     }
   },
   created() {
     this.$store.dispatch('portfolios/showPortfolios')
     this.$store.dispatch('socials/showSocials')
+    this.$store.dispatch('skills/showSkills')
   }
 }
 </script>

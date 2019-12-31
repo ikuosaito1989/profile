@@ -11,17 +11,20 @@ describe('index', () => {
       new Vuex.Store({
         getters: {
           'portfolios/portfolios': () => lazy('portfolios'),
-          'socials/socials': () => lazy('socials')
+          'socials/socials': () => lazy('socials'),
+          'skills/skills': () => lazy('skills')
         },
         actions: {
           'portfolios/showPortfolios': jest.fn(),
-          'socials/showSocials': jest.fn()
+          'socials/showSocials': jest.fn(),
+          'skills/showSkills': jest.fn()
         }
       })
   )
 
   lazy('portfolios', () => null)
   lazy('socials', () => null)
+  lazy('skills', () => null)
 
   lazy('component', () => mount(index, { store: lazy('store') }))
 
