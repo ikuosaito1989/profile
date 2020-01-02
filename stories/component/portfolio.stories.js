@@ -10,7 +10,7 @@ storiesOf('component', module)
     return {
       components: { Portfolio },
       template:
-        '<Portfolio :name="name" id="1" :thumbnail-url="thumbnailUrl" />',
+        '<div class="portfolio"><Portfolio :name="name" id="1" :thumbnail-url="thumbnailUrl" /></div>',
       props: {
         name: {
           default: text('タイトル', 'みんなの洋楽ランキング')
