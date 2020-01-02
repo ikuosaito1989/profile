@@ -4,7 +4,7 @@ import Portfolio from '../../src/components/portfolio'
 
 import '../story_helpers/common_style_includable'
 
-storiesOf('コンポーネント', module)
+storiesOf('component', module)
   .addDecorator(withKnobs)
   .add('ポートフォリオ', () => {
     return {
