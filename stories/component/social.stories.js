@@ -1,5 +1,5 @@
 import { storiesOf } from '@storybook/vue'
-import { withKnobs, text, select } from '@storybook/addon-knobs'
+import { withKnobs, select } from '@storybook/addon-knobs'
 import Social from '../../src/components/social'
 
 import '../story_helpers/common_style_includable'
