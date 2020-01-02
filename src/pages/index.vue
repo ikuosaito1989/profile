@@ -81,10 +81,7 @@
         <div class="row-center">
           <div class="skill-description">
             <p class="lead">
-              はじめまして。私は平賀陽一(@musou1500)と申します。
-              高校生の頃からプログラミングを学び始め、今は主にWeb系のことをやっています。
-              言語はPHPを使用することが多いですが、Haxeという言語も大好きで、
-              少しながらコンパイラやIDEの開発にも貢献しています。
+              はじめまして。こんにちは。ぼくはポンコツです。
             </p>
           </div>
           <div class="skill-group">
