@@ -16,8 +16,9 @@
     "build-storybook": "build-storybook"
   },
   "dependencies": {
-    "nuxt": "^2.0.0",
-    "@nuxtjs/axios": "^5.3.6"
+    "@nuxtjs/axios": "^5.3.6",
+    "@storybook/addon-knobs": "^5.2.8",
+    "nuxt": "^2.0.0"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
