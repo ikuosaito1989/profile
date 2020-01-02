@@ -12,12 +12,14 @@ describe('index', () => {
         getters: {
           'portfolios/portfolios': () => lazy('portfolios'),
           'socials/socials': () => lazy('socials'),
-          'skills/skills': () => lazy('skills')
+          'skills/skills': () => lazy('skills'),
+          'resumes/resumes': () => lazy('resumes')
         },
         actions: {
           'portfolios/showPortfolios': jest.fn(),
           'socials/showSocials': jest.fn(),
-          'skills/showSkills': jest.fn()
+          'skills/showSkills': jest.fn(),
+          'resumes/showResumes': jest.fn()
         }
       })
   )
@@ -25,6 +27,7 @@ describe('index', () => {
   lazy('portfolios', () => null)
   lazy('socials', () => null)
   lazy('skills', () => null)
+  lazy('resumes', () => null)
 
   lazy('component', () => mount(index, { store: lazy('store') }))
 

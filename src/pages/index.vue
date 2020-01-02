@@ -35,9 +35,7 @@
     <section id="portfolio" class="page-section portfolio">
       <div class="container">
         <!-- Portfolio Section Heading -->
-        <h2
-          class="page-section-heading text-center text-uppercase text-secondary mb-0"
-        >
+        <h2 class="page-section-heading text-center text-secondary mb-0">
           Portfolio
         </h2>
 
@@ -55,6 +53,7 @@
           <Portfolio
             :key="index"
             v-for="(portfolio, index) in portfolios"
+            :name="portfolio.name"
             :id="portfolio.id"
             :thumbnail-url="portfolio.thumbnailUrl"
           />
@@ -105,8 +104,8 @@
     <section id="about" class="page-section bg-primary text-white mb-0">
       <div class="container">
         <!-- About Section Heading -->
-        <h2 class="page-section-heading text-center text-uppercase text-white">
-          About
+        <h2 class="page-section-heading text-center text-white">
+          Job Description( 職務経歴 )
         </h2>
 
         <!-- Icon Divider -->
@@ -120,23 +119,15 @@
 
         <!-- About Section Content -->
         <div class="row">
-          <div class="col-lg-4 ml-auto">
-            <p class="lead">
-              Freelancer is a free bootstrap theme created by Start Bootstrap.
-              The download includes the complete source files including HTML,
-              CSS, and JavaScript as well as optional SASS stylesheets for easy
-              customization.
-            </p>
-          </div>
-          <div class="col-lg-4 mr-auto">
-            <p class="lead">
-              You can create your own custom avatar for the masthead, change the
-              icon in the dividers, and add your email address to the contact
-              form to make it fully functional!
-            </p>
-          </div>
+          <Resume
+            :key="index"
+            v-for="(resume, index) in resumes"
+            :company="resume.company"
+            :enrollmentPeriod="resume.enrollmentPeriod"
+            :jobDescription="resume.jobDescription"
+            :deliverables="resume.deliverables"
+          />
         </div>
-
         <!-- About Section Button -->
         <div class="text-center mt-4">
           <a
@@ -212,12 +203,14 @@
 import Portfolio from '~/components/portfolio'
 import Social from '~/components/social'
 import Skill from '~/components/skill'
+import Resume from '~/components/resume'
 
 export default {
   components: {
     Portfolio,
     Social,
-    Skill
+    Skill,
+    Resume
   },
   computed: {
     portfolios() {
@@ -228,12 +221,16 @@ export default {
     },
     skills() {
       return this.$store.getters['skills/skills']
+    },
+    resumes() {
+      return this.$store.getters['resumes/resumes']
     }
   },
   created() {
     this.$store.dispatch('portfolios/showPortfolios')
     this.$store.dispatch('socials/showSocials')
     this.$store.dispatch('skills/showSkills')
+    this.$store.dispatch('resumes/showResumes')
   }
 }
 </script>
