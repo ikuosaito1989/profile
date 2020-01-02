@@ -1,0 +1,41 @@
+[
+    {
+        "id": 1,
+        "company": "株式会社ガウス",
+        "enrollmentPeriod": {
+            "from": "2012/04/01",
+            "to": "2015/04/30"
+        },
+        "jobDescription": "",
+        "deliverables": null
+    },
+    {
+        "id": 2,
+        "company": "コンテンツワークス株式会社",
+        "enrollmentPeriod": {
+            "from": "2015/05/01",
+            "to": "2018/03/31"
+        },
+        "jobDescription": "",
+        "deliverables": [
+            {
+                "name": "Photoback",
+                "url": "https://www.photoback.jp/"
+            },
+            {
+                "name": "MEMEPAPER",
+                "url": "https://www.memepaper.jp/"
+            }
+        ]
+    },
+    {
+        "id": 3,
+        "company": "フリーランス",
+        "enrollmentPeriod": {
+            "from": "2015/05/01",
+            "to": null
+        },
+        "jobDescription": "",
+        "deliverables": null
+    }
+]
