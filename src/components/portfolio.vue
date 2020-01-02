@@ -1,5 +1,6 @@
 <template>
   <div class="col-md-6 col-lg-4">
+    <h5 style="text-align: center;">{{ name }}</h5>
     <div class="portfolio-item mx-auto">
       <nuxt-link v-bind:to="{ name: 'portfolio-id', params: { id: id } }">
         <div
@@ -18,6 +19,7 @@
 <script>
 export default {
   props: {
+    name: String,
     id: Number,
     thumbnailUrl: String
   }
