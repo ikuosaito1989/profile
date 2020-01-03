@@ -11,8 +11,8 @@
         />
 
         <!-- Masthead Heading -->
-        <h1 class="masthead-heading text-uppercase mb-0">
-          Start Bootstrap
+        <h1 class="masthead-heading mb-0">
+          Ikuo Saito
         </h1>
 
         <!-- Icon Divider -->
@@ -26,7 +26,7 @@
 
         <!-- Masthead Subheading -->
         <p class="masthead-subheading font-weight-light mb-0">
-          Graphic Artist - Web Designer - Illustrator
+          Web Engineer
         </p>
       </div>
     </header>
@@ -65,8 +65,8 @@
     <section id="about" class="page-section bg-primary text-white mb-0">
       <div class="container">
         <!-- About Section Heading -->
-        <h2 class="page-section-heading text-center text-uppercase text-white">
-          スキル
+        <h2 class="page-section-heading text-center text-white">
+          Skill
         </h2>
 
         <!-- Icon Divider -->
@@ -98,11 +98,11 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="page-section bg-primary text-white mb-0">
+    <section id="about" class="page-section mb-0">
       <div class="container">
         <!-- About Section Heading -->
-        <h2 class="page-section-heading text-center text-white">
-          Job Description( 職務経歴 )
+        <h2 class="page-section-heading text-center">
+          Works
         </h2>
 
         <!-- Icon Divider -->
@@ -138,49 +138,145 @@
       </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="footer text-center">
+    <!-- About Section -->
+    <section id="about" class="page-section bg-primary  text-white mb-0">
       <div class="container">
+        <!-- About Section Heading -->
+        <h2 class="page-section-heading text-center">
+          Social
+        </h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom divider-light">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="divider-custom-line"></div>
+        </div>
+        <div style="text-align: center;">
+          <Social
+            :key="index"
+            v-for="(social, index) in socials"
+            :name="social.fontawesome.name"
+            :prefix="social.fontawesome.prefix"
+            :icon-name="social.fontawesome.iconName"
+            :url="social.url"
+            target="_blank"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="page-section">
+      <div class="container">
+        <!-- Contact Section Heading -->
+        <h2
+          class="page-section-heading text-center text-uppercase text-secondary mb-0"
+        >
+          Contact Me
+        </h2>
+
+        <!-- Icon Divider -->
+        <div class="divider-custom">
+          <div class="divider-custom-line"></div>
+          <div class="divider-custom-icon">
+            <i class="fas fa-star"></i>
+          </div>
+          <div class="divider-custom-line"></div>
+        </div>
+
+        <!-- Contact Section Form -->
         <div class="row">
-          <!-- Footer Location -->
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Location</h4>
-            <p class="lead mb-0">
-              2215 John Daniel Drive <br />Clark, MO 65243
-            </p>
-          </div>
-
-          <!-- Footer Social Icons -->
-          <div class="col-lg-4 mb-5 mb-lg-0">
-            <h4 class="text-uppercase mb-4">Around the Web</h4>
-            <Social
-              :key="index"
-              v-for="(social, index) in socials"
-              :name="social.fontawesome.name"
-              :prefix="social.fontawesome.prefix"
-              :icon-name="social.fontawesome.iconName"
-              :url="social.url"
-              target="_blank"
-            />
-          </div>
-
-          <!-- Footer About Text -->
-          <div class="col-lg-4">
-            <h4 class="text-uppercase mb-4">About Freelancer</h4>
-            <p class="lead mb-0">
-              Freelance is a free to use, MIT licensed Bootstrap theme created
-              by
-              <a href="http://startbootstrap.com">Start Bootstrap</a>.
-            </p>
+          <div class="col-lg-8 mx-auto">
+            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
+            <form id="contactForm" name="sentMessage" novalidate="novalidate">
+              <div class="control-group">
+                <div
+                  class="form-group floating-label-form-group controls mb-0 pb-2"
+                >
+                  <label>Name</label>
+                  <input
+                    id="name"
+                    class="form-control"
+                    type="text"
+                    placeholder="Name"
+                    required="required"
+                    data-validation-required-message="Please enter your name."
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div
+                  class="form-group floating-label-form-group controls mb-0 pb-2"
+                >
+                  <label>Email Address</label>
+                  <input
+                    id="email"
+                    class="form-control"
+                    type="email"
+                    placeholder="Email Address"
+                    required="required"
+                    data-validation-required-message="Please enter your email address."
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div
+                  class="form-group floating-label-form-group controls mb-0 pb-2"
+                >
+                  <label>Phone Number</label>
+                  <input
+                    id="phone"
+                    class="form-control"
+                    type="tel"
+                    placeholder="Phone Number"
+                    required="required"
+                    data-validation-required-message="Please enter your phone number."
+                  />
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <div class="control-group">
+                <div
+                  class="form-group floating-label-form-group controls mb-0 pb-2"
+                >
+                  <label>Message</label>
+                  <textarea
+                    id="message"
+                    class="form-control"
+                    rows="5"
+                    placeholder="Message"
+                    required="required"
+                    data-validation-required-message="Please enter a message."
+                  ></textarea>
+                  <p class="help-block text-danger"></p>
+                </div>
+              </div>
+              <br />
+              <div id="success"></div>
+              <div class="form-group">
+                <button
+                  id="sendMessageButton"
+                  type="submit"
+                  class="btn btn-primary btn-xl"
+                >
+                  Send
+                </button>
+              </div>
+            </form>
           </div>
         </div>
       </div>
-    </footer>
+    </section>
 
     <!-- Copyright Section -->
     <section class="copyright py-4 text-center text-white">
       <div class="container">
-        <small>Copyright &copy; Your Website 2019</small>
+        <small>Copyright &copy; ikuo Saito 2019</small>
       </div>
     </section>
 
