@@ -172,9 +172,7 @@
     <section id="contact" class="page-section">
       <div class="container">
         <!-- Contact Section Heading -->
-        <h2
-          class="page-section-heading text-center text-uppercase text-secondary mb-0"
-        >
+        <h2 class="page-section-heading text-center text-secondary mb-0">
           Contact Me
         </h2>
 
@@ -272,6 +270,37 @@
         </div>
       </div>
     </section>
+
+    <!-- Footer -->
+    <footer class="footer text-center">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h4 class="mb-4">
+              Link
+            </h4>
+            <p class="lead mb-0">
+              <a href="">このサイトを作った理由</a>
+            </p>
+          </div>
+
+          <!-- Footer About Text -->
+          <div class="col-lg-4">
+            <h4 class="mb-4">
+              Storybook
+            </h4>
+            <p class="lead mb-0">
+              このサイトのUIコンポーネントをStorybook上げています。
+              <a
+                href="https://quirky-hoover-d5f9da.netlify.com/?path=/story/component--%E3%82%B9%E3%82%AD%E3%83%AB"
+                target="_blank"
+                >Storybookはこちらから</a
+              >
+            </p>
+          </div>
+        </div>
+      </div>
+    </footer>
 
     <!-- Copyright Section -->
     <section class="copyright py-4 text-center text-white">
