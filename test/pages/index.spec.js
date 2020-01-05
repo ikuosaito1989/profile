@@ -1,7 +1,6 @@
 import '@/test/spec_helper.js'
 import { mount } from '@vue/test-utils'
 import Vuex from 'vuex'
-import { AxiosMock } from '@/test/spec_helpers/nuxt_axios_mock_adapter.js'
 import index from '@/src/pages/index.vue'
 
 describe('index', () => {
@@ -31,18 +30,33 @@ describe('index', () => {
 
   lazy('component', () => mount(index, { store: lazy('store') }))
 
-  beforeEach(() => {
-    AxiosMock.onGet('/api/profile/portfolios').reply(
-      200,
-      require('@/test/fixtures/portfolios.json')
-    )
-    AxiosMock.onGet('/api/profile/socials').reply(
-      200,
-      require('@/test/fixtures/socials.json')
-    )
-  })
-
   test('Vueのインスタンスを返すこと', () => {
     expect(lazy('component').isVueInstance()).toBeTruthy()
+  })
+
+  describe('#sendMail', () => {
+    lazy('form', () => ({
+      name: 'saito',
+      email: 'test@gmail.com',
+      message: 'test'
+    }))
+
+    subject(() => {
+      lazy('component').vm.sendMail(lazy('form'))
+    })
+
+    beforeEach(() => {
+      lazy('component').vm.$store = {
+        dispatch: jest.fn()
+      }
+    })
+
+    test('sendMailが呼ばれること', () => {
+      subject()
+      expect(lazy('component').vm.$store.dispatch).toHaveBeenCalledWith(
+        'mail/sendMail',
+        lazy('form')
+      )
+    })
   })
 })

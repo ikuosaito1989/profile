@@ -187,86 +187,7 @@
 
         <!-- Contact Section Form -->
         <div class="row">
-          <div class="col-lg-8 mx-auto">
-            <!-- To configure the contact form email address, go to mail/contact_me.php and update the email address in the PHP file on line 19. -->
-            <form id="contactForm" name="sentMessage" novalidate="novalidate">
-              <div class="control-group">
-                <div
-                  class="form-group floating-label-form-group controls mb-0 pb-2"
-                >
-                  <label>Name</label>
-                  <input
-                    id="name"
-                    class="form-control"
-                    type="text"
-                    placeholder="Name"
-                    required="required"
-                    data-validation-required-message="Please enter your name."
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div
-                  class="form-group floating-label-form-group controls mb-0 pb-2"
-                >
-                  <label>Email Address</label>
-                  <input
-                    id="email"
-                    class="form-control"
-                    type="email"
-                    placeholder="Email Address"
-                    required="required"
-                    data-validation-required-message="Please enter your email address."
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div
-                  class="form-group floating-label-form-group controls mb-0 pb-2"
-                >
-                  <label>Phone Number</label>
-                  <input
-                    id="phone"
-                    class="form-control"
-                    type="tel"
-                    placeholder="Phone Number"
-                    required="required"
-                    data-validation-required-message="Please enter your phone number."
-                  />
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <div class="control-group">
-                <div
-                  class="form-group floating-label-form-group controls mb-0 pb-2"
-                >
-                  <label>Message</label>
-                  <textarea
-                    id="message"
-                    class="form-control"
-                    rows="5"
-                    placeholder="Message"
-                    required="required"
-                    data-validation-required-message="Please enter a message."
-                  ></textarea>
-                  <p class="help-block text-danger"></p>
-                </div>
-              </div>
-              <br />
-              <div id="success"></div>
-              <div class="form-group">
-                <button
-                  id="sendMessageButton"
-                  type="submit"
-                  class="btn btn-primary btn-xl"
-                >
-                  Send
-                </button>
-              </div>
-            </form>
-          </div>
+          <Contact @submit="sendMail" />
         </div>
       </div>
     </section>
@@ -326,13 +247,15 @@ import Portfolio from '~/components/portfolio'
 import Social from '~/components/social'
 import Skill from '~/components/skill'
 import Resume from '~/components/resume'
+import Contact from '~/components/contact'
 
 export default {
   components: {
     Portfolio,
     Social,
     Skill,
-    Resume
+    Resume,
+    Contact
   },
   computed: {
     portfolios() {
@@ -353,6 +276,11 @@ export default {
     this.$store.dispatch('socials/showSocials')
     this.$store.dispatch('skills/showSkills')
     this.$store.dispatch('resumes/showResumes')
+  },
+  methods: {
+    sendMail(value) {
+      this.$store.dispatch('mail/sendMail', value)
+    }
   }
 }
 </script>
