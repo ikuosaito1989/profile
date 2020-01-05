@@ -19,6 +19,7 @@
     "@nuxtjs/axios": "^5.3.6",
     "@storybook/addon-knobs": "^5.2.8",
     "nuxt": "^2.0.0",
+    "sweetalert": "^2.1.2",
     "vee-validate": "^3.2.1"
   },
   "devDependencies": {
