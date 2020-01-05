@@ -20,7 +20,8 @@
     "@storybook/addon-knobs": "^5.2.8",
     "nuxt": "^2.0.0",
     "sweetalert": "^2.1.2",
-    "vee-validate": "^3.2.1"
+    "vee-validate": "^3.2.1",
+    "vue-notifications": "^1.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.7.7",
