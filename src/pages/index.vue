@@ -268,8 +268,8 @@ export default {
     this.$store.dispatch('resumes/showResumes')
   },
   methods: {
-    sendMail(value) {
-      this.$store.dispatch('mail/sendMail', value)
+    async sendMail(value) {
+      await this.$store.dispatch('mail/sendMail', value)
       swal(
         'Thank you！',
         'お問い合わせありがとうございます！出来る限り早急にご返信いたしますので今しばらくお待ちください🙇‍♀️',
