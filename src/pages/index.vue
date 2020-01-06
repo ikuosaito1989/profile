@@ -243,6 +243,7 @@
 </template>
 
 <script>
+import swal from 'sweetalert'
 import Portfolio from '~/components/portfolio'
 import Social from '~/components/social'
 import Skill from '~/components/skill'
@@ -280,6 +281,11 @@ export default {
   methods: {
     sendMail(value) {
       this.$store.dispatch('mail/sendMail', value)
+      swal(
+        'Thank you！',
+        'お問い合わせありがとうございます！出来る限り早急にご返信いたしますので今しばらくお待ちください🙇‍♀️',
+        'success'
+      )
     }
   }
 }
