@@ -19,6 +19,10 @@ describe('portfolios', () => {
   )
 
   lazy('mockPortfolios', () => require('@/test/fixtures/portfolios.json'))
+  lazy(
+    'mockSelectedPortfolios',
+    () => require('@/test/fixtures/portfolios.json')[0]
+  )
 
   test('Store instance is generated', () => {
     expect(lazy('store') instanceof Vuex.Store).toBeTruthy()
@@ -46,6 +50,35 @@ describe('portfolios', () => {
         })
       })
     })
+
+    describe('selectPortfolio', () => {
+      subject(() =>
+        actions.selectPortfolio.bind({ $axios })(lazy('context'), {
+          portfolioId: 1
+        })
+      )
+
+      lazy('context', () => ({
+        commit: jest.fn()
+      }))
+
+      beforeEach(() => {
+        AxiosMock.onGet('/api/profile/portfolios/1').reply(
+          200,
+          lazy('mockPortfolios')
+        )
+      })
+
+      test('サーバーに問合せ後、状態がコミットされること', async () => {
+        await subject()
+        expect(lazy('context').commit).toHaveBeenCalledWith(
+          'setSelectedPortfolio',
+          {
+            selectedPortfolio: lazy('mockSelectedPortfolios')
+          }
+        )
+      })
+    })
   })
 
   describe('Getter', () => {
@@ -60,10 +93,22 @@ describe('portfolios', () => {
         expect(subject()).toBe(lazy('mockPortfolios'))
       })
     })
+
+    describe('selectedPortfolio', () => {
+      subject(() => getters.selectedPortfolio(lazy('mockState')))
+
+      lazy('mockState', () => ({
+        selectedPortfolio: lazy('mockPortfolios')
+      }))
+
+      test('選択中のポートフォリオが返ること', () => {
+        expect(subject()).toBe(lazy('mockPortfolios'))
+      })
+    })
   })
 
   describe('Mutation', () => {
-    describe('portfolios', () => {
+    describe('setPortfolios', () => {
       lazy('mockState', () => state())
       subject(() =>
         mutations.setPortfolios(lazy('mockState'), {
@@ -74,6 +119,20 @@ describe('portfolios', () => {
       test('ジョブが state にセットされること', () => {
         subject()
         expect(lazy('mockState').portfolios).toBe(lazy('mockPortfolios'))
+      })
+    })
+
+    describe('setSelectedPortfolio', () => {
+      lazy('mockState', () => state())
+      subject(() =>
+        mutations.setSelectedPortfolio(lazy('mockState'), {
+          selectedPortfolio: lazy('mockPortfolios')
+        })
+      )
+
+      test('ジョブが state にセットされること', () => {
+        subject()
+        expect(lazy('mockState').selectedPortfolio).toBe(lazy('mockPortfolios'))
       })
     })
   })
