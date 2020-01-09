@@ -4,7 +4,7 @@
       <div class="row justify-content-center">
         <div class="col-lg-8">
           <!-- Portfolio Modal - Title -->
-          <h2 class="portfolio-modal-title text-secondary text-uppercase mb-0">
+          <h2 class="portfolio-modal-title text-secondary mb-0">
             {{ selectedPortfolio.name }}
           </h2>
           <!-- Icon Divider -->
@@ -18,17 +18,33 @@
           <!-- Portfolio Modal - Image -->
           <img
             :src="selectedPortfolio.thumbnailUrl"
-            class="img-fluid rounded mb-5"
+            class="image rounded mb-5"
             alt=""
           />
-          <!-- Portfolio Modal - Text -->
-          <p class="mb-5">
-            {{ selectedPortfolio.description }}
-          </p>
+          <div class="text-left mb-5">
+            <!-- Portfolio Modal - Text -->
+            <p class="lead">
+              {{ selectedPortfolio.description }}
+            </p>
+
+            <div class="mb-3">
+              URL :
+              <a :href="selectedPortfolio.portfolioUrl" target="_blank">{{
+                selectedPortfolio.portfolioUrl
+              }}</a>
+            </div>
+            <div class="mb-3">
+              <Tag
+                :key="index"
+                v-for="(skill, index) in selectedPortfolio.skills"
+                :name="skill"
+              />
+            </div>
+          </div>
           <n-link to="/">
             <button class="btn btn-primary" href="#" data-dismiss="modal">
               <i class="fas fa-times fa-fw"></i>
-              もどる
+              トップへもどる
             </button>
           </n-link>
         </div>
@@ -38,16 +54,26 @@
 </template>
 
 <script>
+import Tag from '~/components/tag'
 export default {
+  components: {
+    Tag
+  },
   computed: {
     selectedPortfolio() {
       return this.$store.getters['portfolios/selectedPortfolio']
     }
   },
-  async fetch(context) {
-    await context.store.dispatch('portfolios/selectPortfolio', {
-      portfolioId: context.params.id
+  created() {
+    this.$store.dispatch('portfolios/selectPortfolio', {
+      portfolioId: this.$route.params.id
     })
   }
 }
 </script>
+<style scoped>
+.image {
+  max-width: 100%;
+  height: auto;
+}
+</style>

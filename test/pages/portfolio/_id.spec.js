@@ -14,20 +14,25 @@ describe('_id', () => {
     }
   })
   store.dispatch = jest.fn()
-  context = {
-    store,
+
+  const $route = {
     params: { id: 1 }
   }
-  const wrapper = mount(_id, { store })
+
+  const wrapper = mount(_id, {
+    store,
+    mocks: {
+      $route
+    }
+  })
 
   test('Vueのインスタンスを返すこと', () => {
     expect(wrapper.isVueInstance()).toBeTruthy()
   })
 
   test('selectPortfolioが呼ばれること', () => {
-    _id.fetch(context)
     expect(
-      context.store.dispatch
+      wrapper.vm.$store.dispatch
     ).toHaveBeenCalledWith('portfolios/selectPortfolio', { portfolioId: 1 })
   })
 })
