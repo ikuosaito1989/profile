@@ -78,21 +78,17 @@
           <div class="divider-custom-line"></div>
         </div>
 
-        <div class="row-center">
-          <div class="skill-description">
-            <p class="lead">
-              はじめまして。こんにちは。ぼくはポンコツです。
-            </p>
-          </div>
-          <div class="skill-group">
-            <Skill
-              :key="index"
-              v-for="(skill, index) in skills"
-              :name="skill.name"
-              :thumbnail-url="skill.thumbnailUrl"
-              :star="skill.star"
-            />
-          </div>
+        <p class="lead">
+          はじめまして、こんにちは、WEBエンジニアです。
+        </p>
+        <div class="row">
+          <Skill
+            :key="index"
+            v-for="(skill, index) in skills"
+            :name="skill.name"
+            :thumbnail-url="skill.thumbnailUrl"
+            :star="skill.star"
+          />
         </div>
       </div>
     </section>
@@ -106,7 +102,7 @@
         </h2>
 
         <!-- Icon Divider -->
-        <div class="divider-custom divider-light">
+        <div class="divider-custom">
           <div class="divider-custom-line"></div>
           <div class="divider-custom-icon">
             <i class="fas fa-star"></i>
@@ -125,18 +121,10 @@
             :deliverables="resume.deliverables"
           />
         </div>
-        <!-- About Section Button -->
-        <div class="text-center mt-4">
-          <a
-            class="btn btn-xl btn-outline-light"
-            href="https://startbootstrap.com/themes/freelancer/"
-          >
-            <i class="fas fa-download mr-2"></i>
-            Free Download!
-          </a>
-        </div>
       </div>
     </section>
+
+    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
 
     <!-- About Section -->
     <section id="about" class="page-section bg-primary  text-white mb-0">
@@ -279,3 +267,14 @@ export default {
   }
 }
 </script>
+<style scoped>
+.skill-group {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.skill-description {
+  padding: 0px 20px;
+  text-align: center;
+}
+</style>

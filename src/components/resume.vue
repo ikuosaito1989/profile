@@ -1,18 +1,21 @@
 <template>
-  <div class="col-lg-4 mr-auto">
+  <div class="col-lg-4 mr-auto mb-3">
     <h4>{{ company }}</h4>
-    <div>期間：{{ convertPeriod }}</div>
+    <div class="mb-2">期間：{{ convertPeriod }}</div>
     <p class="lead">
       {{ jobDescription }}
     </p>
     <div v-if="deliverables">
-      <div>成果物</div>
-      <a
-        :key="index"
-        v-for="(deliverable, index) in deliverables"
-        :href="deliverable.url"
-        >{{ deliverable.name }}</a
-      >
+      <div>
+        成果物 :
+        <a
+          :key="index"
+          v-for="(deliverable, index) in deliverables"
+          :href="deliverable.url"
+          class="mr-1"
+          >{{ deliverable.name }}</a
+        >
+      </div>
     </div>
   </div>
 </template>
