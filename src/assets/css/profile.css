@@ -1,41 +1,6 @@
-.star-rating {
-    position: relative;
-    width: 125px;
-    font-size: 25px;
-    letter-spacing: -1.5px;
-    top: -5px;
+.page-enter-active, .page-leave-active {
+    transition: opacity .5s;
 }
-.star-rating-front {
-    position: absolute;
-    top: 0;
-    left: 0;
-    overflow: hidden;
-    color: #ffcc33;
-}
-.star-rating-back {
-    color: #ccc;
-}
-.skill-name {
-    font-size: 1.25rem;
-    font-weight: 300;
-    margin-right: 13px;
-}
-.skill-box {
-    margin: 10px 20px;
-    width: 140px;
-}
-.skill-group {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.skill-description {
-    padding: 0px 20px;
-    text-align: center;
-}
-.row-center {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+.page-enter, .page-leave-to {
+    opacity: 0;
 }
