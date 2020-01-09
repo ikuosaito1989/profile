@@ -9,6 +9,7 @@ export const actions = {
     context.commit('setPortfolios', { portfolios })
   },
   async selectPortfolio(context, { portfolioId }) {
+    context.commit('setSelectedPortfolio', { selectedPortfolio: [{}] })
     const portfolios = await this.$axios.$get(
       `/api/profile/portfolios/${portfolioId}`
     )
