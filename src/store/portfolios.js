@@ -1,6 +1,6 @@
 export const state = () => ({
-  portfolios: [{}],
-  selectedPortfolio: {}
+  portfolios: undefined,
+  selectedPortfolio: undefined
 })
 
 export const actions = {
@@ -9,7 +9,7 @@ export const actions = {
     context.commit('setPortfolios', { portfolios })
   },
   async selectPortfolio(context, { portfolioId }) {
-    context.commit('setSelectedPortfolio', { selectedPortfolio: [{}] })
+    context.commit('setSelectedPortfolio', { selectedPortfolio: undefined })
     const portfolios = await this.$axios.$get(
       `/api/profile/portfolios/${portfolioId}`
     )

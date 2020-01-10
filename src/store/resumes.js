@@ -1,5 +1,5 @@
 export const state = () => ({
-  resumes: {}
+  resumes: undefined
 })
 
 export const actions = {

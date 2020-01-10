@@ -1,5 +1,5 @@
 export const state = () => ({
-  skills: {}
+  skills: undefined
 })
 
 export const actions = {

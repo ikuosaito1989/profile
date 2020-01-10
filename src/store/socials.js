@@ -1,5 +1,5 @@
 export const state = () => ({
-  socials: {}
+  socials: undefined
 })
 
 export const actions = {
