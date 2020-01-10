@@ -47,18 +47,17 @@
           </div>
           <div class="divider-custom-line"></div>
         </div>
-
-        <!-- Portfolio Grid Items -->
-        <div class="row">
-          <Portfolio
-            :key="index"
-            v-for="(portfolio, index) in portfolios"
-            :name="portfolio.name"
-            :id="portfolio.id"
-            :thumbnail-url="portfolio.thumbnailUrl"
-          />
-        </div>
-        <!-- /.row -->
+        <Loading v-model="portfolios">
+          <div class="row">
+            <Portfolio
+              :key="index"
+              v-for="(portfolio, index) in portfolios"
+              :name="portfolio.name"
+              :id="portfolio.id"
+              :thumbnail-url="portfolio.thumbnailUrl"
+            />
+          </div>
+        </Loading>
       </div>
     </section>
 
@@ -78,18 +77,20 @@
           <div class="divider-custom-line"></div>
         </div>
 
-        <p class="lead">
-          はじめまして、こんにちは、WEBエンジニアです。
-        </p>
-        <div class="row">
-          <Skill
-            :key="index"
-            v-for="(skill, index) in skills"
-            :name="skill.name"
-            :thumbnail-url="skill.thumbnailUrl"
-            :star="skill.star"
-          />
-        </div>
+        <Loading v-model="skills">
+          <p class="lead">
+            はじめまして、こんにちは、WEBエンジニアです。
+          </p>
+          <div class="row">
+            <Skill
+              :key="index"
+              v-for="(skill, index) in skills"
+              :name="skill.name"
+              :thumbnail-url="skill.thumbnailUrl"
+              :star="skill.star"
+            />
+          </div>
+        </Loading>
       </div>
     </section>
 
@@ -101,7 +102,6 @@
           Works
         </h2>
 
-        <!-- Icon Divider -->
         <div class="divider-custom">
           <div class="divider-custom-line"></div>
           <div class="divider-custom-icon">
@@ -110,21 +110,20 @@
           <div class="divider-custom-line"></div>
         </div>
 
-        <!-- About Section Content -->
-        <div class="row">
-          <Resume
-            :key="index"
-            v-for="(resume, index) in resumes"
-            :company="resume.company"
-            :enrollmentPeriod="resume.enrollmentPeriod"
-            :jobDescription="resume.jobDescription"
-            :deliverables="resume.deliverables"
-          />
-        </div>
+        <Loading v-model="resumes">
+          <div class="row">
+            <Resume
+              :key="index"
+              v-for="(resume, index) in resumes"
+              :company="resume.company"
+              :enrollmentPeriod="resume.enrollmentPeriod"
+              :jobDescription="resume.jobDescription"
+              :deliverables="resume.deliverables"
+            />
+          </div>
+        </Loading>
       </div>
     </section>
-
-    <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
 
     <!-- About Section -->
     <section id="about" class="page-section bg-primary  text-white mb-0">
@@ -142,17 +141,19 @@
           </div>
           <div class="divider-custom-line"></div>
         </div>
-        <div style="text-align: center;">
-          <Social
-            :key="index"
-            v-for="(social, index) in socials"
-            :name="social.fontawesome.name"
-            :prefix="social.fontawesome.prefix"
-            :icon-name="social.fontawesome.iconName"
-            :url="social.url"
-            target="_blank"
-          />
-        </div>
+        <Loading v-model="socials">
+          <div style="text-align: center;">
+            <Social
+              :key="index"
+              v-for="(social, index) in socials"
+              :name="social.fontawesome.name"
+              :prefix="social.fontawesome.prefix"
+              :icon-name="social.fontawesome.iconName"
+              :url="social.url"
+              target="_blank"
+            />
+          </div>
+        </Loading>
       </div>
     </section>
 
@@ -226,6 +227,7 @@ import Social from '~/components/social'
 import Skill from '~/components/skill'
 import Resume from '~/components/resume'
 import Contact from '~/components/contact'
+import Loading from '~/components/loading'
 
 export default {
   components: {
@@ -233,7 +235,8 @@ export default {
     Social,
     Skill,
     Resume,
-    Contact
+    Contact,
+    Loading
   },
   computed: {
     portfolios() {
