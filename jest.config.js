@@ -23,5 +23,5 @@ module.exports = {
       statements: 100
     }
   },
-  coveragePathIgnorePatterns: ['contact.vue']
+  coveragePathIgnorePatterns: ['contact.vue', '_id.vue']
 }
