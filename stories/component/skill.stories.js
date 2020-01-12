@@ -12,7 +12,7 @@ storiesOf('component', module)
       template: '<Skill :name="name" thumbnail-url="" :star="star"/>',
       props: {
         name: {
-          default: text('名前', 'Vue')
+          default: text('名前', 'NuxtJS')
         },
         star: {
           default: select(
