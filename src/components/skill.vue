@@ -1,9 +1,11 @@
 <template>
   <div class="skill-box">
     <div class="skill-name">{{ name }}</div>
-    <div class="star-rating">
-      <div :style="starRatingStyle(star)" class="star-rating-front">★★★★★</div>
-      <div class="star-rating-back">★★★★★</div>
+    <div class="box">
+      <div class="star-rating">
+        <div class="star-rating-front">{{ starRating(star) }}</div>
+        <div class="star-rating-back">★★★★★</div>
+      </div>
     </div>
   </div>
 </template>
@@ -16,32 +18,31 @@ export default {
     star: Number
   },
   methods: {
-    starRatingStyle(star) {
-      return `width: ${star * 20}%`
+    starRating(star) {
+      return '★'.repeat(star)
     }
   }
 }
 </script>
 
 <style scoped>
-.star-rating {
-  position: relative;
-  width: 125px;
-  font-size: 25px;
-  letter-spacing: -1.5px;
-  top: -5px;
+.box {
+  height: 37px;
 }
-.star-rating-front {
+.star-rating {
   position: absolute;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  color: #ffcc33;
-  opacity: 0.7;
+  font-size: 25px;
 }
 .star-rating-back {
   color: #ccc;
 }
+
+.star-rating-front {
+  position: absolute;
+  color: #ffcc33;
+  z-index: 100;
+}
+
 .skill-name {
   font-size: 1.25rem;
   font-weight: 300;

@@ -26,7 +26,7 @@
 
         <!-- Masthead Subheading -->
         <p class="masthead-subheading font-weight-light mb-0">
-          Web Engineer
+          Full Stack Engineer
         </p>
       </div>
     </header>
@@ -79,9 +79,10 @@
 
         <Loading v-model="skills">
           <p class="lead">
-            はじめまして、こんにちは、WEBエンジニアです。
+            はじめまして、こんにちは。東京近郊でWEBエンジニアをやっています。WEBサービスを作ることが好きなので
+            フロントエンド、サーバー問わずやっています。
           </p>
-          <div class="row">
+          <div style="justify-content: center;" class="row">
             <Skill
               :key="index"
               v-for="(skill, index) in skills"
@@ -180,30 +181,36 @@
         </div>
       </div>
     </section>
-    <!-- Footer -->
+
     <footer class="footer text-center">
       <div class="container">
         <div class="row">
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <h4 class="mb-4">
               Link
             </h4>
             <p class="lead mb-0">
-              <a href="">このサイトを作った理由</a>
+              このサイトはNuxtJsの勉強用に作成しました。このサイトの概要は
+              <transition>
+                <nuxt-link
+                  v-bind:to="{ name: 'portfolio-id', params: { id: id } }"
+                  >こちら</nuxt-link
+                >
+              </transition>
             </p>
           </div>
 
           <!-- Footer About Text -->
-          <div class="col-lg-4">
+          <div class="col-lg-6">
             <h4 class="mb-4">
               Storybook
             </h4>
             <p class="lead mb-0">
-              このサイトのUIコンポーネントをStorybook上げています。
+              このサイトのUIコンポーネントをStorybook上げています。 Storybookは
               <a
                 href="https://quirky-hoover-d5f9da.netlify.com/?path=/story/component--%E3%82%B9%E3%82%AD%E3%83%AB"
                 target="_blank"
-                >Storybookはこちらから</a
+                >こちら</a
               >
             </p>
           </div>
