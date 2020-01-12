@@ -23,10 +23,7 @@
               alt=""
             />
             <div class="text-left mb-5">
-              <!-- Portfolio Modal - Text -->
-              <p class="lead">
-                {{ selectedPortfolio.description }}
-              </p>
+              <div v-html="convertMarkdown(selectedPortfolio.description)" />
 
               <div class="mb-3">
                 URL :
@@ -56,6 +53,7 @@
 </template>
 
 <script>
+import marked from 'marked'
 import Tag from '~/components/tag'
 import Loading from '~/components/loading'
 export default {
@@ -72,6 +70,11 @@ export default {
     this.$store.dispatch('portfolios/selectPortfolio', {
       portfolioId: this.$route.params.id
     })
+  },
+  methods: {
+    convertMarkdown(content) {
+      return marked(content)
+    }
   }
 }
 </script>
