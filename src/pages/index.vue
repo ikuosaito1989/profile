@@ -270,7 +270,7 @@ export default {
       await this.$store.dispatch('mail/sendMail', value)
       swal(
         'Thank you！',
-        'お問い合わせありがとうございます！出来る限り早急にご返信いたしますので今しばらくお待ちください🙇‍♀️',
+        'お問い合わせありがとうございます！出来る限り早急にご返信いたしますので今しばらくお待ちください。',
         'success'
       )
     }

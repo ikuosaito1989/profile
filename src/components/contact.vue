@@ -58,7 +58,7 @@
                 v-model="form.message"
                 class="form-control"
                 rows="5"
-                placeholder="まずはお話から♪"
+                placeholder="なんでも良いのでメッセージください。"
               ></textarea>
               <p class="help-block text-danger">{{ errors[0] }}</p>
             </ValidationProvider>
