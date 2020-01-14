@@ -193,7 +193,7 @@
               このサイトはNuxtJsの勉強用に作成しました。このサイトの概要は
               <transition>
                 <nuxt-link
-                  v-bind:to="{ name: 'portfolio-id', params: { id: id } }"
+                  v-bind:to="{ name: 'portfolio-id', params: { id: 2 } }"
                   >こちら</nuxt-link
                 >
               </transition>
