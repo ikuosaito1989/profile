@@ -1,11 +1,20 @@
+require('dotenv').config()
+const { TITLE, DESCRIPTION, SITE_URL, META_IMAGE } = process.env
+
 export default {
   mode: 'universal',
+  env: {
+    TITLE,
+    DESCRIPTION,
+    META_IMAGE,
+    SITE_URL
+  },
   srcDir: 'src/',
   /*
    ** Headers of the page
    */
   head: {
-    title: process.env.npm_package_name || '',
+    title: process.env.TITLE,
     meta: [
       { charset: 'utf-8' },
       {
@@ -15,7 +24,51 @@ export default {
       {
         hid: 'description',
         name: 'description',
-        content: process.env.npm_package_description || ''
+        content: process.env.DESCRIPTION
+      },
+      {
+        property: 'og:title',
+        content: process.env.TITLE
+      },
+      {
+        property: 'og:type',
+        content: 'website'
+      },
+      {
+        property: 'og:url',
+        content: process.env.SITE_URL
+      },
+      {
+        property: 'og:image',
+        content: process.env.META_IMAGE
+      },
+      {
+        property: 'og:site_name',
+        content: process.env.TITLE
+      },
+      {
+        property: 'og:description',
+        content: process.env.DESCRIPTION
+      },
+      {
+        name: 'twitter:title',
+        content: process.env.TITLE
+      },
+      {
+        name: 'twitter:image',
+        content: process.env.META_IMAGE
+      },
+      {
+        name: 'twitter:url',
+        content: process.env.SITE_URL
+      },
+      {
+        name: 'twitter:card',
+        content: 'summary_large_image'
+      },
+      {
+        name: 'twitter:description',
+        content: process.env.DESCRIPTION
       }
     ],
     link: [
