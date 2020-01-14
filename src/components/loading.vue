@@ -1,25 +1,10 @@
 <template>
   <div class="text-center">
     <span v-if="!value" class="fa faa-passing animated">
-      <img
-        width="100px"
-        class="masthead-avatar"
-        src="~/assets/img/profile.png"
-        alt=""
-      />
-      <img
-        width="100px"
-        class="masthead-avatar"
-        src="~/assets/img/profile.png"
-        alt=""
-      />
-      <img
-        width="100px"
-        class="masthead-avatar"
-        src="~/assets/img/profile.png"
-        alt=""
-      />
-      <div>少々お待ちください。</div>
+      <i class="fas fa-running s"></i>
+      <i class="fas fa-running middre"></i>
+      <i class="fas fa-running large"></i>
+      <div class="title">少々お待ちください。</div>
     </span>
 
     <transition name="fade">
@@ -41,4 +26,17 @@ export default {
 }
 </script>
 
-<style scoped></style>
+<style scoped>
+.s {
+  font-size: 1.5rem;
+}
+.middre {
+  font-size: 2.5rem;
+}
+.large {
+  font-size: 3.5rem;
+}
+.title {
+  font-size: 1.5rem;
+}
+</style>
