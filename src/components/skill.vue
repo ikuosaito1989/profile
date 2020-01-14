@@ -13,9 +13,18 @@
 <script>
 export default {
   props: {
-    name: String,
-    thumbnailUrl: String,
-    star: Number
+    name: {
+      type: String,
+      default: ''
+    },
+    thumbnailUrl: {
+      type: String,
+      default: ''
+    },
+    star: {
+      type: Number,
+      default: 0
+    }
   },
   methods: {
     starRating(star) {

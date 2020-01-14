@@ -7,11 +7,26 @@
 <script>
 export default {
   props: {
-    name: String,
-    prefix: String,
-    iconName: String,
-    url: String,
-    target: String
+    name: {
+      type: String,
+      default: ''
+    },
+    prefix: {
+      type: String,
+      default: ''
+    },
+    iconName: {
+      type: String,
+      default: ''
+    },
+    url: {
+      type: String,
+      default: ''
+    },
+    target: {
+      type: String,
+      default: ''
+    }
   },
   computed: {
     className() {

@@ -33,7 +33,10 @@
 <script>
 export default {
   props: {
-    value: Boolean
+    value: {
+      type: [Array, Object],
+      default: () => []
+    }
   }
 }
 </script>

@@ -21,9 +21,18 @@
 <script>
 export default {
   props: {
-    name: String,
-    id: Number,
-    thumbnailUrl: String
+    name: {
+      type: String,
+      default: ''
+    },
+    id: {
+      type: Number,
+      default: 0
+    },
+    thumbnailUrl: {
+      type: String,
+      default: ''
+    }
   }
 }
 </script>

@@ -23,13 +23,22 @@
 <script>
 export default {
   props: {
-    company: String,
-    enrollmentPeriod: {
-      from: String,
-      to: String
+    company: {
+      type: String,
+      default: ''
     },
-    jobDescription: String,
-    deliverables: []
+    enrollmentPeriod: {
+      type: Object,
+      default: null
+    },
+    jobDescription: {
+      type: String,
+      default: ''
+    },
+    deliverables: {
+      type: Array,
+      default: () => []
+    }
   },
   computed: {
     convertPeriod() {
