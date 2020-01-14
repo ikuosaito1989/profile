@@ -177,7 +177,10 @@
 
         <!-- Contact Section Form -->
         <div class="row">
-          <Contact @submit="sendMail" />
+          <div class="col-lg-8 mx-auto">
+            正社員のお誘いやお手伝いさせて頂けそうな企業様がいらっしゃいましたら、下記の問合せフォームにでご連絡お願いします。
+            <Contact @submit="sendMail" />
+          </div>
         </div>
       </div>
     </section>
