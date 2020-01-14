@@ -34,8 +34,8 @@
 export default {
   props: {
     value: {
-      type: [Array, Object],
-      default: () => []
+      type: [Array, Object, Boolean],
+      default: false
     }
   }
 }
