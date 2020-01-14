@@ -74,5 +74,11 @@ export default {
      ** You can extend webpack config here
      */
     extend(config, ctx) {}
+  },
+  /*
+   ** Configure the generation of your universal web application to a static web application.
+   */
+  generate: {
+    fallback: true
   }
 }
