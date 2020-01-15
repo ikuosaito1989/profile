@@ -69,6 +69,10 @@ export default {
       {
         name: 'twitter:description',
         content: process.env.DESCRIPTION
+      },
+      {
+        name: 'google-site-verification',
+        content: 'qF6cytze7DCkmBecF5Z2nq-MCrATZWHNTYbHPle1e8E'
       }
     ],
     link: [
