@@ -37,7 +37,7 @@ export default {
     },
     deliverables: {
       type: Array,
-      default: () => []
+      default: null
     }
   },
   computed: {
