@@ -11,10 +11,12 @@
     "generate": "nuxt generate",
     "lint": "eslint --ext .js,.vue --ignore-path .gitignore .",
     "lint:fix": "eslint --fix --ext .js,.vue --ignore-path .gitignore .",
-    "test": "jest",
+    "test": "jest test",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "webserver": "http-server ./dist -o -p 8888"
+    "webserver": "http-server ./dist -o -p 8888",
+    "cypress:open": "cypress open",
+    "cypress": "cypress run"
   },
   "dependencies": {
     "@nuxtjs/axios": "^5.3.6",
@@ -47,6 +49,7 @@
     "eslint-plugin-prettier": "^3.0.1",
     "jest": "^24.1.0",
     "prettier": "^1.16.4",
-    "vue-jest": "^4.0.0-0"
+    "vue-jest": "^4.0.0-0",
+    "cypress": "^3.8.2"
   }
 }
