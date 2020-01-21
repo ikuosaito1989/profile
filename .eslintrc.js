@@ -21,7 +21,8 @@ module.exports = {
     context: true,
     lazy: true,
     subject: true,
-    cy: true
+    cy: true,
+    page: true
   },
   // add your custom rules here
   rules: {

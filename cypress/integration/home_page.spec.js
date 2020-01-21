@@ -7,7 +7,7 @@ describe('The Home Page', function() {
       url: `/api/profile/portfolios`,
       response: 'fixture:portfolios.json'
     })
-    cy.visit('/') // change URL to match your dev URL
+    cy.visit('/sarch') // change URL to match your dev URL
     cy.server({ enable: false })
   })
 })
