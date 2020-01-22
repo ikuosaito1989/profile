@@ -23,6 +23,5 @@ module.exports = {
       statements: 100
     }
   },
-  coveragePathIgnorePatterns: ['contact.vue', '_id.vue'],
-  preset: 'jest-puppeteer'
+  coveragePathIgnorePatterns: ['contact.vue', '_id.vue']
 }
