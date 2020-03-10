@@ -1,22 +1,11 @@
-import { extend } from 'vee-validate'
-import { required, email } from 'vee-validate/dist/rules'
+import { extend, localize } from 'vee-validate'
+// import VeeLocaleJa from 'vee-validate/dist/locale/ja'
+import VeeLocaleJa from 'vee-validate/dist/locale/ja.json'
+import { email, max, required } from 'vee-validate/dist/rules'
 
-// No message specified.
-extend('email', {
-  ...email,
-  message: '有効なメールアドレスではありません'
-})
+extend('email', email)
+extend('max', max)
+extend('required', required)
 
-// Override the default message.
-extend('required', {
-  ...required,
-  message: '{_field_}は必須項目です。'
-})
-
-extend('max', {
-  validate: (value, args) => {
-    return value.length <= args.length
-  },
-  message: '{_field_}は{length}文字以内で入力してください。',
-  params: ['length']
-})
+// 言語設定
+localize('ja', VeeLocaleJa)
