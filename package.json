@@ -19,7 +19,7 @@
     "cypress": "cypress run"
   },
   "dependencies": {
-    "@nuxtjs/axios": "5.9.0",
+    "@nuxtjs/axios": "5.13.1",
     "@storybook/addon-knobs": "5.2.8",
     "http-server": "0.12.1",
     "marked": "0.8.0",
