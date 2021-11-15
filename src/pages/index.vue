@@ -38,7 +38,9 @@
         <h2 class="page-section-heading text-center text-secondary mb-0">
           Portfolio
         </h2>
-
+        <p class="lead">
+          個人で作ったサービスです。アーキテクチャや苦労話など書いてますのでぜひご覧ください！
+        </p>
         <!-- Icon Divider -->
         <div class="divider-custom">
           <div class="divider-custom-line"></div>
