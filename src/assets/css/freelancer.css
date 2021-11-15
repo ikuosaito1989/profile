@@ -398,6 +398,7 @@ h6, .h6 {
 }
 
 .lead {
+  text-align: center;
   font-size: 1.25rem;
   font-weight: 300;
 }

@@ -38,9 +38,6 @@
         <h2 class="page-section-heading text-center text-secondary mb-0">
           Portfolio
         </h2>
-        <p class="lead">
-          個人で作ったサービスです。アーキテクチャや苦労話など書いてますのでぜひご覧ください！
-        </p>
         <!-- Icon Divider -->
         <div class="divider-custom">
           <div class="divider-custom-line"></div>
@@ -49,6 +46,9 @@
           </div>
           <div class="divider-custom-line"></div>
         </div>
+        <p class="lead">
+          個人で作ったサービスです。アーキテクチャや苦労話など書いてますのでぜひご覧ください！
+        </p>
         <Loading v-model="portfolios">
           <div class="row">
             <Portfolio
@@ -81,8 +81,8 @@
 
         <Loading v-model="skills">
           <p class="lead">
-            はじめまして、こんにちは。東京近郊でWEBエンジニアをやっています。WEBサービスを作ることが好きなので
-            フロントエンド、サーバー問わずやっています。
+            はじめまして、こんにちは。東京近郊でWEBエンジニアをやっています。<br />
+            WEBサービスを作ることが好きなのでフロントエンド、サーバー問わずやっています。
           </p>
           <div style="justify-content: center;" class="row">
             <Skill
