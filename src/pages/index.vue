@@ -36,7 +36,7 @@
       <div class="container">
         <!-- Portfolio Section Heading -->
         <h2 class="page-section-heading text-center text-secondary mb-0">
-          Portfolio
+          ポートフォリオ
         </h2>
         <!-- Icon Divider -->
         <div class="divider-custom">
@@ -67,7 +67,7 @@
       <div class="container">
         <!-- About Section Heading -->
         <h2 class="page-section-heading text-center text-white">
-          Skill
+          スキル
         </h2>
 
         <!-- Icon Divider -->
@@ -102,7 +102,7 @@
       <div class="container">
         <!-- About Section Heading -->
         <h2 class="page-section-heading text-center">
-          Works
+          経歴
         </h2>
 
         <div class="divider-custom">
@@ -133,7 +133,7 @@
       <div class="container">
         <!-- About Section Heading -->
         <h2 class="page-section-heading text-center">
-          Social
+          ソーシャル
         </h2>
 
         <!-- Icon Divider -->
@@ -165,7 +165,7 @@
       <div class="container">
         <!-- Contact Section Heading -->
         <h2 class="page-section-heading text-center text-secondary mb-0">
-          Contact Me
+          お問い合わせ
         </h2>
 
         <!-- Icon Divider -->
