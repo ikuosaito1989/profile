@@ -18,7 +18,7 @@ storiesOf('component', module)
         thumbnailUrl: {
           default: text(
             'サムネイルURL',
-            'https://isaito-mock.herokuapp.com/main.jpg'
+            'https://festive-yonath-a04e1e.azurewebsites.net/main.jpg'
           )
         }
       }

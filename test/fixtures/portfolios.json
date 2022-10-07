@@ -2,28 +2,28 @@
     {
         "id": 1,
         "name": "みんなの洋楽ランキング",
-        "thumbnailUrl": "https://isaito-mock.herokuapp.com/main.jpg",
+        "thumbnailUrl": "https://festive-yonath-a04e1e.azurewebsites.net/main.jpg",
         "description": "最新のビルボードチャート(Billboard Hot 100 Chart)からいち早く洋楽ランキングTOP10をご紹介。最新チャート、Youtube再生回数、年間チャートの洋楽ランキングを解説、動画、視聴ありで発信しています。",
         "portfolioUrl": "https://mygkrnk.com"
     },
     {
         "id": 2,
         "name": "cabin",
-        "thumbnailUrl": "https://isaito-mock.herokuapp.com/cabin.png",
+        "thumbnailUrl": "https://festive-yonath-a04e1e.azurewebsites.net/cabin.png",
         "description": "cabinテスト",
         "portfolioUrl": "https://mygkrnk.com"
     },
     {
         "id": 3,
         "name": "cake",
-        "thumbnailUrl": "https://isaito-mock.herokuapp.com/cake.png",
+        "thumbnailUrl": "https://festive-yonath-a04e1e.azurewebsites.net/cake.png",
         "description": "cakeテスト",
         "portfolioUrl": "https://mygkrnk.com"
     },
     {
         "id": 4,
         "name": "circus",
-        "thumbnailUrl": "https://isaito-mock.herokuapp.com/circus.png",
+        "thumbnailUrl": "https://festive-yonath-a04e1e.azurewebsites.net/circus.png",
         "description": "circusテスト",
         "portfolioUrl": "https://mygkrnk.com"
     }
