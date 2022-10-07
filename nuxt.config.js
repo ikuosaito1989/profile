@@ -126,7 +126,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://isaito-mock.herokuapp.com'
+    baseURL: 'https://festive-yonath-a04e1e.azurewebsites.net'
   },
   /*
    ** Build configuration
