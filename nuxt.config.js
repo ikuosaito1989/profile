@@ -126,7 +126,7 @@ export default {
    ** See https://axios.nuxtjs.org/options
    */
   axios: {
-    baseURL: 'https://festive-yonath-a04e1e.azurewebsites.net'
+    baseURL: 'https://festive-yonath.azurewebsites.net/'
   },
   /*
    ** Build configuration
