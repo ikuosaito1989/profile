@@ -18,7 +18,7 @@ storiesOf('component', module)
         thumbnailUrl: {
           default: text(
             'サムネイルURL',
-            'https://festive-yonath-a04e1e.azurewebsites.net/main.jpg'
+            'https://festive-yonath.azurewebsites.net/main.jpg'
           )
         }
       }
