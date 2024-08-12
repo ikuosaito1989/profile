@@ -276,6 +276,7 @@ export default {
   },
   methods: {
     async sendMail(value) {
+      console.log(value)
       await this.$store.dispatch('mail/sendMail', value)
       swal(
         'Thank you！',
